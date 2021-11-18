@@ -1,0 +1,17 @@
+
+
+{% extends 'index.html' %}
+
+{% block content %}
+
+  <h2>Book Details</h2>
+
+
+
+  <h3>{{book.title}}</h3>
+  <p>Author: {{book.author}}</p>
+  <p>Issue Year: {{book.year}}</p>
+
+  <button type="button" class="btn btn-default"><a href="{{ url_for('deleteBook', book_id=book.id) }}">Delete this book</a></button>
+
+{% endblock %}

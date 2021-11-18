@@ -1,0 +1,157 @@
+
+h1 {
+    color: #75cfb8;
+    text-align: center;
+}
+
+h2 {
+    color: #75cfb8;
+    text-align: center;
+}
+
+h3, p {
+    color: #0b4f6c;
+    text-align: center;
+}
+
+.book-list {
+    text-align: center;
+}
+
+.title {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.title a {
+    text-decoration: none;
+    color: #0b4f6c;
+    font-size: 18px;
+}
+
+.btn-default{
+    text-align: center;
+    margin:0 auto;
+    display:block;
+    border:none;
+    padding: 15px 30px;
+    background: #75cfb8;
+    border-radius: 4px;
+}
+
+
+.btn-default a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.form {
+    width: 90%;
+    max-width: 340px;
+    margin: 10vh auto;
+  }
+  
+  .form-header {
+    text-align: center;
+    opacity: 0;
+    transform: translate3d(0, 500px, 0);
+    animation: arrive 500ms ease-in-out 0.7s forwards;
+  }
+  
+  .form-title {
+    margin-bottom: -10px;
+    font-weight: 500;
+    color: #75cfb8
+  }
+  
+  .add-form {
+    margin-top: 40px;
+    border-radius: 6px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translate3d(0, 500px, 0);
+    animation: arrive 500ms ease-in-out 0.9s forwards;
+  }
+  
+  .add-form--no {
+    animation: NO 1s ease-in-out;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .add-form__input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    transition: 0.3s;
+  }
+    
+  .add-form__input:focus {
+       background: darken(#fff, 3%);
+    }
+  
+  
+  .btn-add-form {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    -webkit-appearance: none;
+    outline: 0;
+    border: 0;
+    color: white;
+    background: #0b4f6c;
+    transition: 0.3s;
+  }
+  
+  .btn-add-form:hover {
+        background: darken(#ABA194, 5%);
+    }
+  
+
+  
+  @keyframes NO {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+  }
+  
+  @keyframes arrive {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 50px, 0);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes move {
+    0% {
+        background-position: 0 0
+    }
+  
+    50% {
+        background-position: 100% 0
+    }
+  
+    100% {
+        background-position: 0 0
+    }
+  }
