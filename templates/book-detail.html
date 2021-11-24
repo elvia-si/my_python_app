@@ -12,6 +12,9 @@
   <p>Author: {{book.author}}</p>
   <p>Issue Year: {{book.year}}</p>
 
+  <div class="book-detail">
+  <button type="button" class="btn btn-default"><a href="{{ url_for('update', book_id=book.id) }}">Edit this book</a></button>
   <button type="button" class="btn btn-default"><a href="{{ url_for('deleteBook', book_id=book.id) }}">Delete this book</a></button>
+  </div>
 
 {% endblock %}

@@ -49,6 +49,23 @@ def get_book(book_id):
     return render_template('book-detail.html', book=book)
 
 # PATCH VERB UPDATE BOOK
+@app.route("/book/update/<book_id>",  methods=["GET", "POST"])
+def update(book_id):
+    book = Book.query.filter_by(id=book_id).first()
+    if request.method == 'POST':
+        newauthor = request.form.get("newauthor")
+        newtitle = request.form.get("newtitle")
+        newyear = request.form.get("newyear")
+        if newauthor:
+            book.author = newauthor
+        if newtitle:
+            book.title = newtitle
+        if newyear:
+            book.year = newyear
+        db.session.commit()
+        return redirect(url_for('getBooks'))
+    return render_template('edit-book.html', book=book)
+
 
 
 #DELETE HTTP VERB

@@ -29,10 +29,14 @@ h3, p {
     font-size: 18px;
 }
 
+.book-detail {
+  display: flex;
+  align-items: center;
+}
+
 .btn-default{
     text-align: center;
-    margin:0 auto;
-    display:block;
+    margin:40px auto;
     border:none;
     padding: 15px 30px;
     background: #75cfb8;
@@ -155,3 +159,6 @@ h3, p {
         background-position: 0 0
     }
   }
+
+
+
