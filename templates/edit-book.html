@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="form">
+    <header class="form-header">
+  <h2 class="form-title">Edit Details</h2>
+</header>
+
+
+
+   
+    <form class="add-form" action="{{ request.path }}" method="POST">
+        <div class="add-form__group">
+        <input class="add-form__input" type="text" name="newauthor" value="{{book.author}}">
+        </div>
+        <div class="add-form__group">
+        <input class="add-form__input" type="text" name="newtitle" value="{{book.title}}">
+        </div>
+        <button type="submit" value="Update" class="btn-add-form">Submit</button>
+    </form>
+
+</div>
+
+{% endblock %}
